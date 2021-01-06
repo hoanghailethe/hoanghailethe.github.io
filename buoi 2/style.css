@@ -1,0 +1,41 @@
+/* Đây là chú thích trong CSS */
+/* selector * để chọn toàn bộ phần tử để áp dụng câu lệnh CSS. và thẻ * này có thứ tự 
+    Nếu ko set thì sẽ có margin mặc định. Do đó có thể dùng * để SET lại */
+
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box
+}
+
+p{
+    color: green;
+    background-color: orange;
+    font-size: 40px;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+#red {
+    margin-top: 30px;
+    width: 100%;
+    height: 300px;
+    background-color: red;
+    border-width: 3px;
+    border-style: solid;
+    border-color:green;
+    border: 10x solid blue;
+}
+
+#green {
+    margin-top: 30px;
+    width: 50%;
+    height: 300px;
+    background-color: green;
+}
+
+.style-border {
+    border: 10px solid black;
+    padding: 20px;
+}
+

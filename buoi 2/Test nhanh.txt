@@ -1,0 +1,91 @@
+1.   Thẻ img dùng thuộc tính gì để hiển thị ảnh?
+source
+
+href
+
+src
+
+alt
+
+3.   Tạo một file tên là index.html và gõ vào nội dung sau, khi chạy trên trình duyệt tiêu đề của trang (tab) sẽ là gì?
+Demo index
+
+index.html
+
+index
+
+demo index
+
+4.   Cú pháp nào sau đây là đúng?
+<h1>Heading</h1>
+
+<H1>Heading</H1>
+
+<h1/>Heading </h1>
+
+<H1/>Heading </H1>
+
+2.   Để chú thích trong file html, sử dụng cú pháp nào sau đây là đúng?
+// Chú thích ở đây
+
+<!-- Chú thích ở đây -->
+
+/* Chú thích ở đây */
+
+/** Chú thích ở đây */
+
+5.   Thẻ nào tạo ra tiêu đề lớn nhất?
+<heading6>
+
+<h1>
+
+<head>
+
+<h6>
+
+<heading1>
+
+6.   Một thẻ trong HTML được bao bọc bởi cặp ký tự nào?
+( và )
+
+<? và ?>
+
+? và !
+
+< và >
+
+7.   Đoạn code sau sẽ hiển thị lên trình duyệt như thế nào?
+<title>Hello World</title>
+
+<h1>Hello Hell</h1>
+
+Hello World
+
+Hello Hell
+
+8.   Ký tự nào luôn có mặt trong thẻ đóng của element?
++
+
+-
+
+/
+
+*
+
+9.   Làm thế nào để ngắt dòng trong đoạn văn mà vẫn giữ nguyên khoảng cách giữa các dòng?
+Sử dụng thẻ <newline>
+
+Sử dụng thẻ <br>
+
+Sử dụng thẻ <break>
+
+Sử dụng thẻ <enter>
+
+10.   HTML là viết tắt của cụm từ nào?
+Holistic Technical Method Library
+
+Hyper Tool Markup Language
+
+Hyper Text Markup Language
+
+Home Tool Markup Language
