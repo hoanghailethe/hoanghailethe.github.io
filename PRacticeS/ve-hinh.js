@@ -81,10 +81,10 @@ function printX() {
         str = " ";
         for ( var i = 0 ; i <= (height-1) ; i++) {
                 for ( var j = 0 ; j <= (height-1) ; j++) {
-                    if ( (j = i) || ( j = ( height - 1  - i) ) ) { 
+                    if ( (j == i) || ( j == ( height - 1  - i) ) ) { 
                         str = str + '*'; 
                     } else { 
-                        str = str + '&nbsp' ;
+                        str = str + '&nbsp&nbsp' ;
                         }				
                     }
             str += '<br/>';
@@ -94,26 +94,47 @@ function printX() {
     
 
 function printButerfly () {
-    str = " ";
+    str = "";
     var h = document.getElementById("B-height").value;
-    for ( var i=0 ; i< h ; i++) {
-            if (i < (( h +1)/2) ) { 
-                 for ( var j= 0 ; j < h ; j++) { 
-                    if ( ( j <= i) | (j >= (h - i) ) ) { 
-                         str =str + "*";
-                        } else { str += "&nbsp"; } 
-                    }
-            } else { 
-                  for ( var j= 0 ; j< h ; j++) {
-                      if ( j <= (h - i) | ( j>= i ) ) { 
-                          str =str + "*";
-                        } else { 
-                            str += "&nbsp";
-                        } 
-                    }
-                }	
-            str += '<br/>';
-            }
-        document.getElementById("hinh-ve").innerHTML = str;
-        alert('str');
+    for ( var i = 0 ; i< (h+1)/2 ; i++) {	
+        for (var j = 0 ; j < h ; j++) {
+            if ( (i >= j) || (j >= (h-i)) ) {
+                str += "*";
+            } else { str += "&nbsp"; }
+        }
+        str += '<br/>';
+        }
+
+    for ( var i = (h+1)/2 ; i < h ; i++) {
+        for (var j = 0 ; j < h ; j++) { 
+            if ( (i <= j) || ( j <= (h-i)) ) {
+                    str += "*";
+            } else { str += "&nbsp"; }
+        str += '<br/>';
+        }  
     }
+    document.getElementById("hinh-ve").innerHTML = str;
+    alert('str');
+}
+
+    // for ( var i = 0 ; i< h ; i++) {
+    //         if (i < (( h +1)/2) ) { 
+    //              for ( var j= 0 ; j < h ; j++) { 
+    //                 if ( ( j <= i) || (j >= (h - i) ) ) { 
+    //                      str += "*";
+    //                     } else { str += "&nbsp"; } 
+    //                 }
+    //         } else { 
+    //               for ( var j= 0 ; j< h ; j++) {
+    //                   if ( j <= (h - i) || ( j>= i ) ) { 
+    //                       str += "*";
+    //                     } else { 
+    //                         str += "&nbsp";
+    //                     } 
+    //                 }
+    //             }	
+    //         str += '<br/>';
+    //         }
+    //     document.getElementById("hinh-ve").innerHTML = str;
+    //     alert('str');
+    // }

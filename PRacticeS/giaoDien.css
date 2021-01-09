@@ -3,6 +3,10 @@ h1{
     text-align: center;
 }
 
+input {
+    width: 90px;
+}
+
 .board {
     background-color: cornflowerblue;
     overflow: hidden;
