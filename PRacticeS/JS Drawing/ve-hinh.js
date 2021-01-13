@@ -93,12 +93,13 @@ function printX() {
     }
     
 
-function printButerfly () {
+function printButterfly () {
     str = "";
-    var h = document.getElementById("B-height").value;
+    var h = parseInt(document.getElementById("B-height").value);
+    
     for ( var i = 0 ; i< (h+1)/2 ; i++) {	
         for (var j = 0 ; j < h ; j++) {
-            if ( (i >= j) || (j >= (h-i)) ) {
+            if ( (i >= j) || (j >= (h-i-1)) ) {
                 str += "*";
             } else { str += "&nbsp"; }
         }
@@ -107,11 +108,11 @@ function printButerfly () {
 
     for ( var i = (h+1)/2 ; i < h ; i++) {
         for (var j = 0 ; j < h ; j++) { 
-            if ( (i <= j) || ( j <= (h-i)) ) {
+            if ( (i <= j) || ( j <= (h-i -1 )) ) {
                     str += "*";
             } else { str += "&nbsp"; }
-        str += '<br/>';
         }  
+        str += '<br/>';
     }
     document.getElementById("hinh-ve").innerHTML = str;
     alert('str');
