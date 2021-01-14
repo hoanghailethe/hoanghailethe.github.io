@@ -46,12 +46,16 @@
 
 ul.navigation {
     display: flex;   
+    height: 100%;
 
 }
 
 .navigation li {
-        list-style-type: none;
-        margin: 0 10px;
+    height: 100%;
+    list-style-type: none;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 .navigation li a {
@@ -67,10 +71,6 @@ ul.navigation {
     font-size: 18px;
 }
 
-.navigation li a:hover {
-    color: #C4C4C4;
-}
-
 .shopping-cart {
     color: white;
     font-size: 21px;
@@ -78,20 +78,68 @@ ul.navigation {
     cursor: pointer;
 }
 
+/* CSS menu đa cấp */
+.navigation li {
+    position: relative;
+}
+
+.sub-menu {
+    position: absolute; 
+    left: auto;
+    right: 0;
+    top: 100%;
+    float: left;
+    min-width: 300px;
+    display: none;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+.navigation li:hover .sub-menu  {
+    display: block;
+    background-color: white;    
+}
+
+.sub-menu li {
+    height: 50px;
+    margin: 0px;
+    transition: all;
+}
+
+.navigation .sub-menu li a{
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: #464646;
+}
+
+.sub-menu li a:hover {
+    background-color: #c4c4c4; 
+    color: white;
+}
+
+
+/* End of css menu da cap*/
+
+
+
+
 /*  avata navigation */
 .avatar {
     display: flex;
-    width: 50px;
-    height: 100%;
-    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    margin-right: 16px;
 }
 
 .avatar img {
     align-self: center;
     width: 100%;
-    max-height: 80%;
+    max-height: 100%;
     object-fit: cover;
-    border-radius: 30%;
+    border-radius: 50%;
     cursor: pointer;
 }
 
@@ -217,7 +265,7 @@ ul.navigation {
 
 .second-row a {
     text-decoration: none;
-    color:black;
+    color: #464646;
     width: 25%;
     display: flex;
     flex-direction: column;
@@ -242,7 +290,7 @@ ul.navigation {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 400;
-    color:  #A199A6;
+    color: #999;
     width: 80%;
     margin: auto;
     text-align: center;
@@ -250,12 +298,14 @@ ul.navigation {
 /* 
 body route part from here */
 
-.route-items-wrap {
+.body-container-auto .route-items-wrap {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
     background-color: #E4F2FD;
-    height: 450px;
+ 
 }
 
 h2 {
@@ -265,10 +315,11 @@ h2 {
 }
 
 .route-items {
-    width: 32%;
-    height: 100%;
+    width: 31.5%;
+    height: 420px;
     background-color: white;
     margin-top: 20px;
+    margin-bottom: 20px;
     line-height: 1;
     border-radius: 5px;
     box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
@@ -281,16 +332,18 @@ h2 {
 
 .route-items img {
     width: 100%;
-    max-height: 65%;
+    height: 70%;
     overflow: hidden;
 }
 
 .route-description {
+    height: 30%;
     padding: 20px;
     background-color: white;
     text-align: left;
-    line-height: 1.5;
+    line-height: 1;
 }
+
 .route-description h3 {
     color: #464646;
     font-weight: 550;
@@ -315,7 +368,6 @@ p.detail-des  {
 .carouseller {
     width: 100%;
     height: 600px;
-    margin-bottom: 40px;
 }
 
 .carouseller .carou-header {
@@ -324,26 +376,32 @@ p.detail-des  {
     justify-content: space-between;
     margin-top: 50px;
     margin-bottom: 50px;
+    
 }
 
 .carou-header h3 {
     text-align: center;
     font-weight: 500;
     font-size: 24px;
+    
 }
 
-.carou-header .btn button {
-    display: block;
-    background-color:white;
-    color: white;
-    border: none;
-    outline: none;
+.chevron {
+    font-size: 16px; 
     cursor: pointer;
+    border: #2196f3 2px solid;
+    width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow:0 5px 5px 0 rgba(0, 0, 0, 0.15);
+
 }
 
 .carou-list {
     width: 100%;
-    height: 70%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -351,19 +409,17 @@ p.detail-des  {
 
 .carol-item {
     width:31.5%;
-    height: 80%;
     overflow: hidden;
     border-radius: 6px;
-    box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.15);
 }
 
 .carol-item a {
     text-decoration: none;
-    
 }
 
 .img-carol {
-    height: 70%;
+    height: 200px;
     overflow: hidden;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
@@ -378,7 +434,9 @@ p.detail-des  {
 }
 
 .carou-list .carou-item-description {
-    padding: 12px;
+    max-height: 120px;
+    padding: 14px;
+    overflow: hidden;
 }
 
 .carou-list .carou-item-description .description-title {
@@ -392,7 +450,6 @@ p.detail-des  {
     overflow: hidden;
     color: rgb(70, 70, 70);
     font-size: 14px;
-
 }
 /* Video from here */
 
@@ -406,6 +463,23 @@ iframe {
     height:inherit ;
 }
 
+.messenger-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 40px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: white;
+    background-color: rgb(0, 132, 255);;
+    cursor: pointer;
+}
 /* Footer from here  */
 
 .footer-container-fluid {
@@ -413,8 +487,7 @@ iframe {
     justify-content: space-between;
     background-color: #464646;
     text-align: left;
-    height: 494px;
-
+    padding-bottom: 30px;
 }
 
 .footer-col-holder {
@@ -451,3 +524,4 @@ iframe {
     margin-top: 40px;
     margin-bottom: 20px;
 }
+
