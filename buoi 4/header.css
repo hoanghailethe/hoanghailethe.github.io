@@ -305,7 +305,6 @@ body route part from here */
     justify-content: space-between;
     width: 100%;
     background-color: #E4F2FD;
- 
 }
 
 h2 {
@@ -316,7 +315,6 @@ h2 {
 
 .route-items {
     width: 31.5%;
-    height: 420px;
     background-color: white;
     margin-top: 20px;
     margin-bottom: 20px;
