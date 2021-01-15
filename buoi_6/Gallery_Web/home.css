@@ -1,0 +1,31 @@
+.main-content-wrap {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: bisque;
+   
+}
+
+.Article{
+    padding:20px;
+}
+
+.left {
+    flex: 30%;
+    background-color: rgb(240, 234, 234);
+    padding:20px
+}
+
+.right {
+    padding: 12px;
+    flex:70%;
+    background-color: darkgray;
+}
+
+img {
+    max-width: 60%;
+}
+
+.Article.two, .four{
+    background-color: rgb(231, 202, 38);
+}

@@ -1,0 +1,95 @@
+
+*{
+    margin: 0;
+    padding:0;
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.75;
+}
+
+.wrap-content {
+    margin: auto;
+    max-width: 1600px;
+    width: 100%;
+}
+
+.heading {
+    background-color: black;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    vertical-align:text-bottom;
+
+}
+
+.banner {
+    background-color: rgb(182, 176, 171);
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.banner img {
+    display: block;
+    margin: auto;
+    object-fit: cover;
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    z-index: -1;
+}
+
+.link-navi {
+    width: 100%;
+    display: flex;
+    background-color: coral;
+    height: 40px;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    font-weight: 700;
+}
+.link-navi li {
+    display: block;
+    margin-right: 40px;
+
+}
+
+.main-content {
+    background-color: rgb(182, 176, 171);
+    width: 100%;
+
+}
+
+.main-content .photo-here {
+    width: 85%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    height: 900px;
+    flex-wrap: wrap;
+   
+    overflow:visible;
+}
+
+.main-content .photo-here img {
+    display: block;
+    width: 30%;
+    margin-top: 10px;
+    transition: all 1s linear;
+}
+
+.photo-here img:hover {
+    transform:scale(1.25);
+    
+}
