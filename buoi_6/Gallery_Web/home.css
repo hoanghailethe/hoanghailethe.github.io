@@ -1,31 +1,86 @@
-.main-content-wrap {
+.slogan-intro-bar {
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+    padding: 10px;
+    font-family:'Fraunces', serif;
+    font-family: 'Lobster', cursive;
+    background-color: rgb(238, 236, 223);
+    line-height: 2;
+    letter-spacing: 2;
+    font-weight: 400;
+}
+
+.row .left-col h2 {
+    font-size: 30px;
+    margin-top: 10px;
+    color:brown;
+}
+
+.ref-1 .img {
     display: flex;
     flex-direction: row;
-    width: 100%;
-    background-color: bisque;
-   
+    flex-wrap: wrap;
+}
+.ref-1 .img img {
+    margin: 6px;
+    max-height: 100px;
 }
 
 .Article{
     padding:20px;
 }
 
-.left {
-    flex: 30%;
-    background-color: rgb(240, 234, 234);
-    padding:20px
-}
-
-.right {
-    padding: 12px;
-    flex:70%;
-    background-color: darkgray;
-}
-
-img {
-    max-width: 60%;
-}
 
 .Article.two, .four{
     background-color: rgb(231, 202, 38);
 }
+
+.img-holder {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+}
+
+.img-holder img {
+    width: 49%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.footer {
+    color: black;
+    font-size: 16px;
+    font-weight: lighter;
+    background-color:lightgrey;
+}
+
+.footer a{
+    color:black;
+    font-size: 16px;
+}
+
+
+.footer .row {
+    padding: 15px;
+    line-height: 2;
+    justify-content: space-around;
+    font-weight: 150;
+    padding-left: 30px;
+    margin: auto;
+}
+
+.col_3i {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.footer .col_3i h2, .footer .col_3i h2 a{
+    color:rgb(173, 61, 16) ;
+    font-size: 20px;
+    text-transform:uppercase;
+}
+
