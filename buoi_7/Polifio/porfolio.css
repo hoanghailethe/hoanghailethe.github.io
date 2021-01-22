@@ -1,0 +1,251 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 2.5;
+    line-height: 1.75;
+
+}
+
+a {
+    text-decoration: none;
+    color: chocolate;
+}
+
+a:hover {
+    color:darkcyan;
+}
+
+
+li {
+    list-style-type: none;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.container {
+    max-width: 1120px;
+    margin: auto;
+    background-color: white;
+}
+
+.head-bar ul {
+    background-color: gray;
+    color: white;
+    border:0.5px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: rgb(233, 180, 102) 0 2px 3px 0px;
+}
+
+.navi-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: olive;
+    color:white;
+}
+
+.INTRO {
+    text-align: center;
+    margin-bottom: 20px;
+    color:darkred;
+}
+
+.INTRO h1 {
+    color: black;
+}
+
+.row-1-3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+/* First Section */
+
+.head-bar ul a, .navi-bar ul a {
+    color: white;
+}
+
+.navi-bar ul a {
+    font-size: 20px;
+}
+
+.left-info, .right-info {
+    width: 20%;
+    text-align: center;
+    border: lightgray 1px solid;
+}
+
+
+.banner, .banner img {
+    max-width: 550px;
+    justify-self: center;
+}
+
+h1, h2 {
+    text-align: center;
+    margin: 16px;
+}
+
+h2 {
+    font-size: 20px;
+}
+/* K and S */
+
+.box-title {
+    background-color:olive;
+    color: white;
+    border: white 2px solid;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px;
+    text-align: center;
+}
+
+.icon {
+    border-top: 2px black solid;
+    font-size: 18px;
+}
+
+.description {
+    text-align: center;
+}
+
+/* Here is the PRODUCT List */
+#grid {
+    justify-content: center;
+}
+
+table {
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border:grey solid 1px;
+    border-collapse:collapse;
+    /* width: max-content; */
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+}
+
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+
+/* box items */
+
+.box-2 {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0px 1px 5px 3px rgb(168, 154, 154);
+    border-radius: 6px;
+
+}
+
+.box-3 {
+    text-align: center;
+    width: 45%;
+}
+
+.box-3 table {
+    width: 100%;
+}
+
+/* idols and quote */
+.box-4 {
+    width: 31.2%;
+}
+
+
+.box-4 .img {
+    width: 100%;
+    height: 200px;
+    text-align: center  ;
+}
+
+.box-4 .img img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.quote {
+    background-color: darkslategray;
+    box-shadow: darkslategray 0px 0px 5px 2px;
+    padding:8px;
+}
+
+.quote p{
+    text-align: center;
+    color: white;
+}
+
+.back-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+   
+}
+.back-top a {
+    color: olive;
+}
+
+.footer {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    font-size: medium;
+    font-weight: 600px;
+    padding-top:30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+
+/* change style */
+h2 {
+    background-color: olivedrab;
+    color: white;
+}
+
+h3 {
+    background-color: orange;
+    color: black;
+}
+
+/* animation */
+.navi-bar li {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
+.head-bar li:hover, .navi-bar li:hover {
+    background-color: gainsboro;
+}
+
+.head-bar li:hover a, .navi-bar li:hover a {
+    color:orangered;
+}
