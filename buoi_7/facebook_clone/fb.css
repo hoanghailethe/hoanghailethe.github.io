@@ -67,7 +67,7 @@ form input {
     color:     #1d2129;
     vertical-align: middle;  
     font-weight: lighter;
-    
+    outline: none;
 }
 
 .right form input:focus {
