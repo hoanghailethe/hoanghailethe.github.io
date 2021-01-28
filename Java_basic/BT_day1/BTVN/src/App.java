@@ -31,7 +31,7 @@ public class App {
         //bai 3
         System.out.println("Bài 3 - Tính tiền lãi hàng tháng của khoản vay với Số nợ = 100.000.000; Lãi xuất năm: 12% ");
         float baseDebt = 100_000_000f;
-        float yearInterestRate = 12 / 100;
+        float yearInterestRate = 0.12f;
         float monthInterestRate = yearInterestRate / 12;
         float monthlyInterestPayment = monthInterestRate * baseDebt;
         float monthlyTotalPayment = baseDebt / 12 + monthlyInterestPayment;
