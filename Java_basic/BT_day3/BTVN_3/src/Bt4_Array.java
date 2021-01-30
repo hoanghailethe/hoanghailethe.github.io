@@ -96,5 +96,7 @@ public class Bt4_Array {
             System.out.print(" " + A[i]);
         }
         System.out.println("");
+
+        scan.close();
     }
 }
