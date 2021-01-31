@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bt3_Array {
+public class BTNC_3_Array {
     public static void main(String[] arg) throws Exception {
         Scanner scan = new Scanner(System.in);
 

@@ -1,29 +1,85 @@
 import java.util.Scanner;
 
-public class Bt1_Array {
-    public static void main(String[] args) throws Exception {
+public class BT1_Array {
+    // Bài tập mảng một chiều mới
+    public static void main(String[] arg) throws Exception {
         Scanner scan = new Scanner(System.in);
 
-        // nhập số n là độ dài mảng; kiểm tra điều kiện
-        System.out.print("Nhập vào số nguyên dương n (chiều dài mảng): ");
+        // khai bao n
+        System.out.println("n > 0 là chiều rộng mảng A[n]");
+        System.out.print("Nhập n : ");
         int n = scan.nextInt();
         while (n <= 0) {
-            System.out.print("Yêu cầu nhập n >= 0. Hãy nhập lại n : ");
+            System.out.print("nhaập lại n > 0 : ");
             n = scan.nextInt();
         }
-        // Khai báo các giá trị cho mảng A[n]
+
+        // nhap du lieu mang mot chieu
         int[] A = new int[n];
         for (int i = 0; i < n; i++) {
-            System.out.print("Nhập A[" + i + "] : ");
+            System.out.print("nhập A[" + i + "] : ");
             A[i] = scan.nextInt();
         }
-        // In ra mảng vừa nhập
-        System.out.print("Mảng vừa nhập có chứa các giá trị sau : ");
+        System.out.println("");
+
+        // in du lieu mang ra man hinh
+        System.out.print("Mảng A đã nhập gồm các số : ");
+        for (int i = 0; i < n; i++) {
+            System.out.print(" " + A[i]);
+        }
+        System.out.println("");
+
+        // dem so chan => in ra Kq
+        int evenNumCount = 0;
+        for (int i = 0; i < n; i++) {
+            if (A[i] % 2 == 0) {
+                evenNumCount++;
+            }
+        }
+        System.out.println("Mảng A có " + evenNumCount + " số chẵn ");
+
+        // Tim cac so nguyen to trong mang:
+        // Phương pháp kiểm tra: 
+        //  A[i] có chia hết số nguyên nào giữa 2 và căn A[i] ko. Nếu có => là số nguyên tố
+        for (int i = 0; i < n; i++) {
+            int valid = 1; 
+            if (A[i] >= 1) {
+                valid = 0;
+                for (int j = 2 ; j < (Math.sqrt(A[i]) + 1); j++) {
+                    // Số 2 là giá trị duy nhất chia cho chính nó trong vòng lặp này
+                    if (A[i] == 2 ) {
+                        break;
+                    }
+                    // Các trường hợp khác > 2
+                    if (A[i] % j == 0) {
+                        valid++;
+                        break;
+                    }
+                }
+            }
+            if ( valid == 0 ) {
+                System.out.println("A[" + i + "] = " + A[i] + " là số nguyên tố");
+            }
+        }
+
+        // Sap xep mang theo thu tu tang dan
+        for (int i = 0; i < n; i++) {
+            for (int j = i + 1; j < n; j++) {
+                if (A[i] > A[j]) {
+                    int temp = A[i];
+                    A[i] = A[j];
+                    A[j] = temp;
+                }
+            }
+        }
+        // In mang sau khi sap xep
+        System.out.println("");
+        System.out.print("Sắp xếp tăng dần : ");
         for (int i = 0; i < n; i++) {
             System.out.print(" " + A[i]);
         }
 
-        // Chạy thuật toán sắp xếp mảng giá trị giảm dần
+        // SAp xep mang theo othu tu giam dan
         for (int i = 0; i < n; i++) {
             for (int j = i + 1; j < n; j++) {
                 if (A[i] < A[j]) {
@@ -33,65 +89,14 @@ public class Bt1_Array {
                 }
             }
         }
-        // In mảng mới đã sắp xếp thứ tự giảm dần
+        // In mang sau khi sap xep
         System.out.println("");
-        System.out.print("Mảng mới sau khi sắp xếp là : ");
+        System.out.print("Sắp xếp giảm dần : ");
         for (int i = 0; i < n; i++) {
             System.out.print(" " + A[i]);
         }
-
-        // Chạy Thuật toán Tìm số lớn nhất Max_1
-        int max1_value = A[0];
-        for (int i = 1; i < n; i++) {
-            if (max1_value < A[i]) {
-                max1_value = A[i];
-            }
-        }
-        // in ra giá trị MAX_1
         System.out.println("");
-        System.out.println("Giá trị lớn nhất (MAX_1) là : " + max1_value);
-        // In vị trí các phần tử có GTLN
-        System.out.print("Các A[i] có GTLN (MAX_1) có i là : ");
-        for (int i = 0; i < n; i++) {
-            if (A[i] == max1_value) {
-                System.out.print(" " + i);
-            }
-        }
 
-        // Tìm ra số lớn thứ 2 trong dãy:
-        // Bước 1: gán cho max_2 giá trị đầu tiên khác với Max_1
-        int max2_value = A[0];
-        for (int i = 0; i < n; i++) {
-            if (A[i] != max1_value) {
-                max2_value = A[i];
-                break;
-            }
-        }
-        // Bước 2: kiểm tra TH chuỗi chỉ có một giá trị duy nhất là Max_1 
-        // => Không có giá trị lớn thứ 2 và Dùng chương trình tại đây
-        if (max1_value == max2_value) {
-            System.out.println("");
-            System.out.println(
-                    "Tất cả số trong dãy đều bằng nhau hoặc chuỗi này chỉ có 1 số duy nhất. Ko tìm được MAX_2");
-        } else {
-            // Bước 3: Sau khi loại đi TH Chuỗi chỉ gồm 1 giá trị. Chạy tiếp CT TÌM và In MAX_2
-            // Chạy thuật toán tìm Max_2
-            for (int i = 0; i < n; i++) {
-                if (A[i] < max1_value && A[i] > max2_value) {
-                    max2_value = A[i];
-                }
-            }
-            System.out.println("");
-            System.out.println("Giá trị lớn thứ hai (MAX_2) là : " + max2_value);
-            // In vị trí tất cả các phần tử có GT MAX_2
-            System.out.print("Các A[i] có gía trị MAX_2 có i là : ");
-            for (int i = 0; i < n; i++) {
-                if (A[i] == max2_value) {
-                    System.out.print(" " + i);
-                }
-            }
-            System.out.println(" ");
-        }
         scan.close();
     }
 }

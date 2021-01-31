@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Bt2_Array {
+public class BTNC_2_Array {
     //Plus Array and Tranpose Array
     public static void main(String[] arg) throws Exception {
         Scanner scan = new Scanner(System.in);
@@ -62,8 +62,7 @@ public class Bt2_Array {
         }
         // In Ma trận C
         System.out.println("");
-        System.out.println("Ma trận C[" + n + "][" + n + "] = A[" + n + "][" + n + "]+ B[" + n + "][" + n
-                + "] chứa các số sau : ");
+        System.out.println("Ma trận C[" + n + "][" + n + "] = A[" + n + "][" + n + "]+ B[" + n + "][" + n + "] chứa các số sau : ");
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
                 System.out.print("\t" + C[i][j]);
