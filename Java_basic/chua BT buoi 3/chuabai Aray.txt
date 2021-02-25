@@ -1,0 +1,7 @@
+public class
+    psvm
+	Scanner scan = new Scanner (System.in);
+	Sysout("nhap so luong phan tu: ");
+
+	in arr[] = new int[n];
+	
