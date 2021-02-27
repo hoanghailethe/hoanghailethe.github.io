@@ -1,6 +1,6 @@
 public class QuanLySV {
     public static void main(String[] args) throws Exception {
-        System.out.println("Chào mừng đến với trang quán lý dữ liệu sinh viên !");
+        System.out.println("Chào mừng đến với trang quản lý dữ liệu sinh viên !");
         System.out.println(" ");
         Student sv1 = new Student();
         sv1.hoTen = "Hong Ngoc";
