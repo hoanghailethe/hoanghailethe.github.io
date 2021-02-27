@@ -64,7 +64,7 @@ public class App {
             System.out.println("Lương cơ bản : ");
             iTester.setBasicSalary(Float.valueOf(scan.nextLine()));
             System.out.println();
-            System.out.println("Số giờ làm thêm : ");
+            System.out.println("Số lỗi phát hiện : ");
             iTester.setNumOfBugs(Integer.valueOf(scan.nextLine()));
             System.out.println();
         }
