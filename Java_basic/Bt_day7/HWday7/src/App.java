@@ -4,7 +4,6 @@ public class App {
     public static void main(String[] args) throws Exception {
         
         Scanner scan = new Scanner (System.in);
-
         //num of student
         System.out.println("Welcome to the Student Management");
         System.out.print("Fill number of students : ");
@@ -19,10 +18,11 @@ public class App {
             student[i].input();
         }
         System.out.println();
+        scan.close();
 
         //log out Infor
         System.out.println("There are "+ numOfStudent + " students in the system");
-        System.out.println("Information of all Students: ");
+        System.out.print("Information of all Students: ");
         for (int i = 0; i<numOfStudent; i++) {
             student[i].display();
         }
