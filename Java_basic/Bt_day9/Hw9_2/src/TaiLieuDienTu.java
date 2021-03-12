@@ -4,15 +4,15 @@ public class TaiLieuDienTu extends Book implements IDownload {
     private int luotTai;
     private float price;
 
-    public TaiLieuDienTu(){
-        //default
+    public TaiLieuDienTu() {
+        // default
     }
-    
+
     @Override
     public void input() {
         // TODO Auto-generated method stub
         super.input();
-        System.out.print("Nhập dung lượng : ");
+        System.out.print("Nhập dung lượng(MB) : ");
         setDungLuong(scan.nextFloat());
         System.out.print("Nhập số lượt tải : ");
         setLuotTai(scan.nextInt());
@@ -23,7 +23,8 @@ public class TaiLieuDienTu extends Book implements IDownload {
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString()+"|Dung lượng:"+dungLuong+"|Lượt tải:"+luotTai+"|Giá:"+price;
+        return super.toString() + "|Dung lượng:" + dungLuong+"MB|Lượt tải:" + luotTai + "|Giá:" + price + "|Tổng tiền: "
+                + String.format("%.3f", tongTien());
     }
 
     @Override
@@ -64,5 +65,4 @@ public class TaiLieuDienTu extends Book implements IDownload {
         this.price = price;
     }
 
-        
 }

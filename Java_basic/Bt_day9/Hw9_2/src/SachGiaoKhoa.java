@@ -12,7 +12,7 @@ public class SachGiaoKhoa extends Book implements IKho,IMuon {
         // TODO Auto-generated method stub
         super.input();
         System.out.print("Nhập số trang sách : ");
-        setId(Integer.valueOf(scan.nextLine()));
+        setNumOfPages(Integer.valueOf(scan.nextLine()));
         System.out.print("Nhập tình trạng sách : ");
         setTinhTrang(scan.nextLine());
         System.out.print("Nhập số lượng cho mượn : ");
@@ -23,7 +23,7 @@ public class SachGiaoKhoa extends Book implements IKho,IMuon {
     public String toString() {
         // TODO Auto-generated method stub
         return super.toString() + "|Số trang : " + numOfPages + "|Tình trạng :" + tinhTrang + "|Số lượng mượn:"
-                + soLuongMuon;
+                + soLuongMuon+"|Vị trí:"+viTri()+"|Tồn kho:"+tonKho();
 
     }
 

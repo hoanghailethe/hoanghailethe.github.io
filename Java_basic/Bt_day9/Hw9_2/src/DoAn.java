@@ -23,7 +23,7 @@ public class DoAn extends Book implements IKho{
     @Override
     public String toString() {
         // TODO Auto-generated method stub
-        return super.toString() + "|Số trang: "+numOfPages+ "|Tình trạng: "+tinhTrang+"|Năm bảo vệ:"+yearProtected;
+        return super.toString() + "|Số trang: "+numOfPages+ "|Tình trạng: "+tinhTrang+"|Năm bảo vệ:"+yearProtected + "|Vị trí:"+viTri();
     }
 
     @Override
