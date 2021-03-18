@@ -4,3 +4,4 @@ public enum Position {
         MF,
         FW;
     }
+

@@ -1,8 +1,8 @@
 
 public class Player {
     private String fullName;
-    Position position;
-    int shirtNum;
+    private Position position;
+    private int shirtNum;
 
     public String getFullName() {
         return fullName;

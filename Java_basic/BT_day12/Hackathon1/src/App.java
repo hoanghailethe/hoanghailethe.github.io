@@ -1,3 +1,5 @@
+import java.io.File;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class App {
@@ -9,24 +11,36 @@ public class App {
         System.out.println("Thoát chương trình: Nhập X hoặc Q");
         
         String n = "";
-        
+
+        File myfile = new File ("D:\\nguyenTo.txt");
+        myfile.createNewFile();
+
+        FileWriter myPen = new FileWriter(myfile);
+        String result = "";
+
         while ( !n.equals("X") && !n.equals("Q")) {
             try {
                 System.out.print("Nhap so nguyen n bat ky: ");
                 n = scan.nextLine();
                 
                 int x = Integer.parseInt(n);
+                
                 if (isPrime(x)) {
-                    System.out.println( x + " là số nguyên tố");
+                    result = x + " là số nguyên tố";
                 } else {
-                    System.out.println(x + " không phải số nguyên tố");
+                    result = x + " không phải số nguyên tố";
+                    
                 }
     
             } catch (NumberFormatException e) {
                 //TODO: handle exception
-                System.out.println( n + " không phải là số");
+                result = n + " không phải là số";
+            } finally {
+                System.out.println(result);
+                myPen.write(result + "\n");
             }
         } 
+        myPen.close();
 
     }
 

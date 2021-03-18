@@ -15,7 +15,7 @@ public class App {
         }
 
         System.out.println();
-        System.out.println("BUILDING 3-3-2 line up");
+        System.out.println("BUILDING 4-4-2 line up");
         one.buildTeam();
         System.out.println("Print SELECTED TEAM: ");
         for (int i = 0 ; i < one.selectedTeam.size(); i++) {
@@ -59,7 +59,7 @@ public class App {
                 //TODO: handle exception
                 System.out.println("OPs! You dont have enough players (DF,MF, FW) for this line-up! ");
             }
-            
         }
+        scan.close();
     }
 }
