@@ -2,7 +2,7 @@ Answer:
 1. C
 2. C
 3. B
-4. B
+4. A
 5. B
 6. D
 7. A
