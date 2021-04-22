@@ -11,7 +11,7 @@ import vn.homeWork.Bean.javaClasses.Tivi;
 @Configuration
 public class ConfigTivi {
 
-    @Value("panel_type")
+    @Value("S{panel_type}")
     private String panelType;
 
     @Value("${operationSys}")
