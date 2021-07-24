@@ -18,13 +18,13 @@ Demo Homework 10
 
 ### App main views
 **1. homepage**
-![localhost:8080/home](view1.png)
+![](view1.jpg)
 
 **2. Register form**
-![Image](view2.png)
+![](view2.jpg)
 
 **3. Job lists**
-![Image](view3.png)
+![](view3.jpg)
 
 ### Project Structure of Source file
 ```
