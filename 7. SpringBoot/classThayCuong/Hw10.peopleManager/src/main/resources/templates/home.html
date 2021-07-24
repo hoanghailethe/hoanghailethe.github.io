@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="template.html::header('list People')">
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <block th:replace="template.html::menu"></block>
+    <main class="container">
+        <div class = "row mt-3">
+            <div class="col-sm-5">
+                <h2>All people on your list: </h2>
+            </div>
+            <a class="btn btn-primary col-2" th:href="@{/register}"> Add new person</a>
+        </div>
+
+        <ul th:each="person : ${people}"
+            class="list-unstyled">
+            <div th:if="${#lists.isEmpty(people)}">
+                <h3>Sorry! There is no person on the List!</h3>
+            </div>
+            <li th:object = "${person}" class="media row mt-3" style="max-height:350px;">
+                <div class=" col-3 mr-3 ">
+                    <img th:src= "@{${path} + *{id} +'.jpg'}"  class="img-fluid" alt="person image">
+                </div>
+                <div class="media-body col-6">
+                    <h5 th:text = "*{fullName}" class="mt-0 mb-1"></h5>
+                    <h5 th:text = "*{job}" class="mt-0 mb-1"></h5>
+                    <h5 th:text = "*{gender}" class="mt-0 mb-1"></h5>
+                    <h5 th:text = "*{birthDate}" class="mt-0 mb-1"></h5>
+                    <a class="btn btn-primary" th:href="@{/delete/person/{id}(id=*{id})}">Delete</a>
+                    <a class="btn btn-primary" th:href="@{/edit/person/{id}(id=*{id})}">Edit</a>
+                </div>
+            </li>
+        </ul>
+
+    </main>
+    <footer th:replace = "template.html::footer"></footer>
+</body>
+</html>
