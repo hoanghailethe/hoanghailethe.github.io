@@ -23,25 +23,25 @@
         <div class="collapse navbar-collapse container" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
-              <a class="nav-link" th:href="@{/home}">Home </a>
+              <a class="nav-link" th:href="@{/home}" th:text="#{home}">Home </a>
             </li>
 <!--            <li class="nav-item active">-->
 <!--              <a class="nav-link" th:href="@{/peopleList}">List people </a>-->
 <!--            </li>-->
             <li class="nav-item active">
-              <a class="nav-link" th:href="@{/jobList}">List Jobs </a>
+              <a class="nav-link" th:href="@{/jobList}" th:text="#{listJob}">List Jobs </a>
             </li>
 
             <li class="nav-item active">
-              <a class="nav-link" href="#">English</a>
+              <a class="nav-link" th:href="@{/home?lang=en}" th:text="#{eng}">English</a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Vietnamese </a>
+              <a class="nav-link" th:href="@{/home?lang=vn}" th:text="#{vn}">Vietnamese </a>
             </li>
           </ul>
           <form class="form-inline mt-2 mt-md-0 d-sm-flex align-items-end">
-            <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <input class="form-control mr-sm-2" type="text" th:placeholder="#{Search}" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" th:text="#{search_btn}">Search</button>
           </form>
         </div>
 
@@ -50,7 +50,7 @@
 
   <footer th:fragment="footer" class="footer">
     <div class="container">
-      <span class="text-muted">People are the greatest asset of great company!</span>
+      <span class="text-muted" th:text="#{footer}">People are the greatest assets of great company!</span>
     </div>
   </footer>
 </body>

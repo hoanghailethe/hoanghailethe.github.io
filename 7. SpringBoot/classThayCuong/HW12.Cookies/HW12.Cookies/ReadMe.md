@@ -22,6 +22,9 @@ Demo Homework 11
 6. Thuộc tính Path dùng để khai báo những đường dẫn bắt buộc trong URL để server gủi cookies xuống client.
 
 [Readmore in Mozilla](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
+
+[Viblo](https://viblo.asia/p/cookie-trong-javascript-m68Z0VP95kG)
+
 ## Code Practice Exercise
 ### Website Screens
 **1. Setting page - before**

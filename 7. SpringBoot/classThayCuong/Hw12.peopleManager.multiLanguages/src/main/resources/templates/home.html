@@ -9,9 +9,9 @@
     <main class="container">
         <div class = "row mt-3">
             <div class="col-sm-5">
-                <h2>All people on your list: </h2>
+                <h2 th:text = "#{heading}">All people on your list: </h2>
             </div>
-            <a class="btn btn-primary col-2" th:href="@{/register}"> Add new person</a>
+            <a class="btn btn-primary col-2" th:href="@{/register}" th:text = "#{add_btn}"> Add new person</a>
         </div>
 
         <ul th:each="person : ${people}"
@@ -28,8 +28,8 @@
                     <h5 th:text = "*{job}" class="mt-0 mb-1"></h5>
                     <h5 th:text = "*{gender}" class="mt-0 mb-1"></h5>
                     <h5 th:text = "*{birthDate}" class="mt-0 mb-1"></h5>
-                    <a class="btn btn-primary" th:href="@{/delete/person/{id}(id=*{id})}">Delete</a>
-                    <a class="btn btn-primary" th:href="@{/edit/person/{id}(id=*{id})}">Edit</a>
+                    <a class="btn btn-primary" th:href="@{/delete/person/{id}(id=*{id})}" th:text = "#{del_btn}">Delete</a>
+                    <a class="btn btn-primary" th:href="@{/edit/person/{id}(id=*{id})}" th:text = "#{edit_btn}">Edit</a>
                 </div>
             </li>
         </ul>

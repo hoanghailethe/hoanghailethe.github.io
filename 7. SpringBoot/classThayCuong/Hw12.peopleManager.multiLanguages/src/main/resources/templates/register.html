@@ -22,15 +22,23 @@
               th:object="${person}">
             <input type="hidden" placeholder="id" th:field="*{id}"/><br><br>
             <div class="form-group row mt-3">
-                <label for="fullName" class="col-sm-2 col-form-label">Name</label>
+                <label for="fullName" class="col-sm-2 col-form-label" th:text="#{fullName}">Name</label>
                 <div class="col-sm-4">
                     <input type="text" class="form-control" id="fullName" th:field="*{fullName}"/>
                 </div>
                 <div class="text-danger" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">Name Error</div>
             </div>
 
+            <div class="form-group row mt-3">
+                <label for="email" class="col-sm-2 col-form-label" th:text="#{email}">Email</label>
+                <div class="col-sm-4">
+                    <input type="text" class="form-control" id="email" th:field="*{email}"/>
+                </div>
+                <div class="text-danger" th:if="${#fields.hasErrors('email')}" th:errors="*{email}">Mail Error</div>
+            </div>
+
             <div class="input-group mt-3 row">
-                <label for="inputGroupSelect03" class="col-sm-2 col-form-label" >Job</label>
+                <label for="inputGroupSelect03" class="col-sm-2 col-form-label" th:text="#{job}">Job</label>
                 <div class="col-sm-8">
                     <select class="custom-select" id="inputGroupSelect03" th:field="*{job}">
                         <block th:each="job : ${jobs}">
@@ -61,19 +69,19 @@
 <!--            </div>-->
 
             <div class="form-group row mt-3">
-                <label for="birthdate" class="col-sm-2 col-form-label">Gender</label>
+                <label for="birthdate" class="col-sm-2 col-form-label" th:text="#{gender}">Gender</label>
                 <div class="form-check form-check-inline col-sm-2">
                     <input class="form-check-input" type="radio" name="gender" id="male" th:value="true" th:field="*{gender}">
-                    <label class="form-check-label" for="male">Male</label>
+                    <label class="form-check-label" for="male" th:text="#{gender.male}">Male</label>
                 </div>
                 <div class="form-check form-check-inline col-sm-2">
                     <input class="form-check-input" type="radio" name="gender" id="female" th:value="false" th:field="*{gender}">
-                    <label class="form-check-label" for="female">Female</label>
+                    <label class="form-check-label" for="female" th:text="#{gender.female}">Female</label>
                 </div>
             </div>
 
             <div class="form-group row mt-3">
-                <label for="birthdate" class="col-sm-2 col-form-label">Date of birth</label>
+                <label for="birthdate" class="col-sm-2 col-form-label" th:text="#{birthDate}" >Date of birth </label>
                 <div class="col-sm-4">
                     <input type="date" class="form-control" id="birthdate" autocomplete="off" th:field="*{birthDate}"
                            name="birthDate"
@@ -84,13 +92,13 @@
 
 
             <div class="form-group row mt-3">
-                <label class="col-sm-2 col-form-label">Select a photo</label>
+                <label class="col-sm-2 col-form-label" th:text="#{photo}">Select a photo</label>
                 <div class="col-sm-4">
-                    <input type="file" class="form-control"th:field="*{photo}" />
+                    <input type="file" class="form-control" th:field="*{photo}" />
                 </div>
                 <div class="text-danger"  th:if="${#fields.hasErrors('photo')}" th:errors="*{photo}">Upload Error</div>
             </div>
-            <button class="btn btn-primary mt-3" type="submit">Submit form</button>
+            <button class="btn btn-primary mt-3" type="submit"  th:text="#{submit_form_btn}">Submit form</button>
         </form>
 
     </main>

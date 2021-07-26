@@ -3,7 +3,10 @@ package com.peopleManager.demo.Controllers;
 import com.peopleManager.demo.Models.Job;
 import com.peopleManager.demo.Repositories.PeopleRepository;
 import com.peopleManager.demo.Request.PersonRequest;
+import com.peopleManager.demo.exception.StorageException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.MessageSource;
+import org.springframework.context.i18n.LocaleContextHolder;
 import org.springframework.stereotype.Controller;
 
 import org.springframework.ui.Model;
@@ -12,12 +15,16 @@ import org.springframework.validation.FieldError;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.util.Locale;
 
 @Controller
 public class RestController {
 
     @Autowired
     PeopleRepository peopleRepo;
+
+    @Autowired
+    MessageSource messageSource;
 
     final String ImgResource = "/photos/";
 
@@ -30,8 +37,13 @@ public class RestController {
 
     @PostMapping(value="/addOrUpdate", consumes = {"multipart/form-data"})
     public String sendNewPersonForm (@Valid @ModelAttribute("person") PersonRequest person, Model model, BindingResult result) throws Exception {
+        //tao ra doi tuong locale
+        Locale locale = LocaleContextHolder.getLocale();
+
         if (person.getPhoto().getOriginalFilename().isEmpty()) {
-            result.addError(new FieldError("person", "photo", "Photo is required"));
+            result.addError(new FieldError("person", "photo",
+                    //change from previous Exercise - default message:
+                    messageSource.getMessage("photo.required", null, "Photo required", locale)));
         }
         if (result.hasErrors()) {
             System.out.println(result.getAllErrors());
@@ -91,6 +103,14 @@ public class RestController {
         model.addAttribute("newJob", new Job());
         model.addAttribute("jobs", peopleRepo.getJobsList());
         return "redirect:/jobList";
+    }
+
+    //add to pre
+    //add to handle upload file bi loi
+    @ExceptionHandler(StorageException.class)
+    public String handleStorageFileNotFound(StorageException e, Model model) {
+        model.addAttribute("errorMessage", e.getMessage());
+        return "failure";
     }
 
 }

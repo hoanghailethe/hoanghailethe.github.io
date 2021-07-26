@@ -14,8 +14,12 @@ import java.util.Date;
 public class Person {
     private int id;
     private String fullName;
+    private String email;
     private String job;
     String gender;
     //@DateTimeFormat(pattern = "dd/MM/yyyy")
     String birthDate;
+
+
+
 }

@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.web.multipart.MultipartFile;
 
+import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
 
@@ -14,15 +15,20 @@ import javax.validation.constraints.Size;
 @AllArgsConstructor
 public class PersonRequest {
     private int id;
-    @NotBlank(message = "your name is required")
-    @Size(min = 5, max = 30, message = "Name must between 5 and 30")
+    @NotBlank(message = "{name_blank}")
+    @Size(min = 5, max = 30, message = "{name_size_between_5_30}")
     private String fullName;
+
+    @NotBlank(message = "{email_blank}")
+    @Email(message = "{email_invalid}")
+    private String email;
 
     @NotBlank(message = "your job is required")
     private String job;
     String gender;
 
-    @NotBlank(message = "your birthday is required")
+    //@DateTimeFormat(pattern = "dd/MM/yyyy")
+    @NotBlank(message = "{birthDate_blank}")
     String birthDate;
     private MultipartFile photo;
 

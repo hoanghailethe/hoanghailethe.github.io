@@ -29,9 +29,9 @@ public class PeopleRepository{
         jobs.add("Actor");
         jobs.add("Footballer");
 
-        people.add(new Person(1, "Tom Cruise","Actor", "Male", "03/27/1987"));
-        people.add(new Person(2, "Lionel Messi","Footballer", "Male", "03/03/1985"));
-        people.add(new Person(3, "De Paul","Actor", "Male", "07/03/1987"));
+        people.add(new Person(1, "Tom Cruise", "Tomcruise@gmail.com", "Actor", "Male", "03/27/1987"));
+        people.add(new Person(2, "Lionel Messi","messi@gmail.com", "Footballer", "Male", "03/03/1985"));
+        people.add(new Person(3, "De Paul","dePaul@gmail.com", "Actor", "Male", "07/03/1987"));
 
         idPeople = people.size();
     }
@@ -81,6 +81,7 @@ public class PeopleRepository{
     public void editPerson(PersonRequest person) {
         Person personEdit = getById(person.getId()).get();
         personEdit.setFullName(person.getFullName());
+        personEdit.setEmail(person.getEmail());
         personEdit.setGender(person.getGender());
         personEdit.setBirthDate(person.getBirthDate());
         personEdit.setJob(person.getJob());
