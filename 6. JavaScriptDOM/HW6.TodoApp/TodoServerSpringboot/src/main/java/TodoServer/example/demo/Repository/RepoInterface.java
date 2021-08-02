@@ -8,7 +8,7 @@ public interface RepoInterface<T, Integer> {
     List<T> getAll();
     abstract void addTask(String title);
     abstract Optional<T> find(int id);
-    abstract void update(T o);
+    abstract void updateStatus(T o);
     abstract void delete(int id);
 
 

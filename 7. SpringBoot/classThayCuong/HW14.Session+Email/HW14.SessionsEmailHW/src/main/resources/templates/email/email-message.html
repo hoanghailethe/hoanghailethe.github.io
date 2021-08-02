@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="body" >
+        <div class="container" >
+            <div class="header" >
+                <h1>Shop Car</h1>
+            </div>
+            <div class="content" >
+                <p>Dear <span th:text="${customer.fullName}"></span> !!</p>
+                <p>We recieved your order! It is on the way!</p>
+
+                <table th:replace="checkout::table"></table>
+
+                <p>Order detail</p>
+                <ul th:object="${customer}">
+                    <li>Your name : <span th:text="*{fullName}"></span></li>
+                    <li>Phone number : <span th:text="*{phone}"></span></li>
+                    <li>Address : <span th:text="*{address}"></span></li>
+                    <li>Email : <span th:text="*{email}"></span></li>
+                </ul>
+
+                <br>
+                <p> CLick here to confirm your order and your mail:
+                    <a href="http://localhost:8080/confirmMail"> Confirm</a>
+                </p>
+                <p class="lead">
+                    If there is any incorrect information. Please contact our customer service to adjusting. Thank you!
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -3,6 +3,7 @@ package TodoServer.example.demo.Controller;
 import TodoServer.example.demo.Model.Task;
 import TodoServer.example.demo.Repository.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,15 +21,16 @@ public class RESTController {
     //CREATE
     @PostMapping("/create")
     //https://stackabuse.com/get-http-post-body-in-spring
-    public List<Task> addNewTask(@RequestBody  Task task, BindingResult result) {
+    public Task addNewTask(@RequestBody  Task task, BindingResult result) {
         if(!result.hasErrors()){
             String taskTitle = task.getTitle();
             taskRepository.addTask(taskTitle);
         }
-        return taskRepository.getAll();
+        //chi tra ve mot doi tuong
+        return task;
     }
 
-    //READ
+    //READ - Khi mới vào sẽ load Dữ liệu từ đây
     @GetMapping("")
     public List<Task> getAllTasks() {
         return taskRepository.getAll();
@@ -39,18 +41,18 @@ public class RESTController {
         return taskRepository.find(id);
     }
 
-    //UPdate
+    //UPdate xong chi can tra ve thong bao la done
     @PutMapping("/update/{id}")
-    public List<Task> updateTask(@RequestBody Task task) {
-        taskRepository.update(task);
-        return taskRepository.getAll();
+    public String updateTaskStatus(@RequestBody Task task) {
+        taskRepository.updateStatus(task);
+        return "update success";
     }
 
-    //delete
+    //delete xong thi tra ve thong bao thanh cong
     @GetMapping("/delete/{id}")
-    public List<Task> deleteTaskById(@PathVariable int id) {
+    public String deleteTaskById(@PathVariable int id) {
         taskRepository.delete(id);
-        return taskRepository.getAll();
+        return "Delete success";
     }
 
 }

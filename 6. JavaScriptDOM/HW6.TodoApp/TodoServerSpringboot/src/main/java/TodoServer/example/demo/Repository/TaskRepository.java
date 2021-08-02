@@ -32,12 +32,16 @@ public class TaskRepository implements RepoInterface<Task, Integer>{
 
     @Override
     public Optional<Task> find(int id) {
-        return tasks.stream().filter(t -> t.getId() == id).findFirst();
+        return tasks.stream().filter(t -> t.getId() == id).findAny();
     }
 
     @Override
-    public void update(Task o) {
-        find(o.getId()).ifPresent( t -> t.setTitle(o.getTitle()));
+    public void updateStatus(Task o) {
+        System.out.println(o.getId());
+        find(o.getId()).ifPresent(t -> {
+            t.setCompleted(true);
+            System.out.println(t.isCompleted());
+        });
     }
 
     @Override

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head th:replace="template :: header('product')">
+</head>
+
+<body>
+  <nav th:replace="template :: nav(${cartCount})"></nav>
+
+  <div class="container mt-3">
+
+    <h2 th:text="'Hi ' +${person.fullName}+ '!'"></h2>
+    <div th:if="${success}">
+      <span>Your order has been successfully received! Please check your email to see the order detail and finish payment.</span>
+      <span>Thank you!</span>
+    </div>
+    <div th:unless="${success}"><span>Sorry, but something went wrong! Please try again or contact our
+        customer service for further guidance</span></div>
+
+  </div>
+</body>
+
+</html>
