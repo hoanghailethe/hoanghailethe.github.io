@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+            "id": 0,
+            "name": "ÁO THUN W2ATN2051003",
+            "image":"https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210329/2915202131534_1_thumb.jpg",
+            "category":"female summer",
+            "price":250000,
+            "reviews":55
+          },
+          {
+            "id": 1,
+            "name": "Set summer",
+            "image":"https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210618/18062021030600_1000_x_1500__Dai_dien.jpg",
+            "category":"female summer",
+            "price":180000,
+            "reviews":30
+          },
+          {
+            "id": 2,
+            "name": "ÁO THUN W2ATN2051007",
+            "image":"https://storage.googleapis.com/cdn.nhanh.vn/store/7136/ps/20210618/18062021030638_1000_x_1500__Dai_dien.jpg",
+            "category":"female summer",
+            "price":250000000,
+            "reviews":59
+          }
+    ],
+    "cart":[]
+}
