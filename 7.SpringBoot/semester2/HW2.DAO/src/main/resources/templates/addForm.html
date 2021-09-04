@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+<div class="container">
+    <div >
+        <h1 th:text="${appName}"></h1>
+    </div>
+
+    <form action="#" th:action="@{/employee/save}" th:object="${Employee}" method="post"
+          novalidate="novalidate">
+        <input type="hidden" placeholder="id" th:field="*{id}" />
+        <input type="text" placeholder="FirstName" th:field="*{firstName}" /><br><br>
+        <input type="text" placeholder="LastName" th:field="*{lastName}" /><br><br>
+        <input type="text" placeholder="Email" th:field="*{email}" /><br><br>
+        <button type="submit"> SUBMIT </button>
+    </form>
+</div>
+</body>
+
+</html>
+
+<!--about th:field-->
+<!--https://stackoverflow.com/questions/25027801/how-to-set-thymeleaf-thfield-value-from-other-variable/50065607-->
