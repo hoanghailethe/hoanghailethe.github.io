@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation_Practice</title>    <style>
+        body{
+            background-color: bisque;
+        }
+
+        .content-wrap {
+            width: 65%;
+            background-color: white;
+            margin: auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 12px;
+            text-align: center;
+        }
+
+        @keyframes hbeating {
+            20% {
+                transform:scale(1.1); 
+                }
+            30% {
+                transform: scale(1);
+                }
+            45% {
+                transform: scale(1.2);
+            }
+            60%{
+                transform: scale(1);
+            }
+            
+            85%{
+                transform:scale(1.1);
+            }
+            100%{
+                transform: scale(1);
+            }
+        }
+
+        .heartBeat img {
+            height: 150px;
+            animation-name: hbeating;
+            animation-duration: 1.25s;
+            animation-delay: 0.75s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        h2 {
+            color:orangered;
+        }
+      
+        .Text-ani{
+            width: 120px;
+            padding: 0;
+            margin: auto;
+        }
+
+        .Text-ani p, span {
+            font-size: 20px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .text-1 {
+            background-color: brown;
+            color: white;
+            width: 120px;
+            margin: auto;
+            position: relative;
+            z-index: 0;
+        }
+
+
+
+        .text-2 {
+            background-color: coral;
+            color: white;
+            width: 120px;
+            position: absolute;
+            left: 0;
+            top:0;
+            z-index: 1;
+            visibility:hidden;
+            animation-name: VISUAL;
+            animation-duration: 8s;
+            animation-delay: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .text-3 {
+            background-color: purple;
+            color: whitesmoke;
+            width: 120px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 2;
+            visibility:hidden;
+            animation-name: VISUAL;
+            animation-duration: 8s;
+            animation-delay: 4s;
+            animation-iteration-count: infinite;
+        }
+
+
+        @keyframes VISUAL {
+            25% {
+                visibility: visible;
+                opacity: 1;
+            }
+            50% {
+                visibility:hidden;
+                opacity: 0;
+            }
+            75% {
+                visibility: hidden;
+                opacity: 0;
+            }
+            100% {
+                visibility:hidden;
+                opacity: 0;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="content-wrap">
+        <h1>ANIMATION PRACTICE</h1>
+        <h2>ANIMATION 1. Heart Beating</h2>
+        <br>
+            <div class="heartBeat">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Heart_coraz%C3%B3n.svg/1200px-Heart_coraz%C3%B3n.svg.png" alt="Heart">
+            </div>
+
+        <br>
+        <h2>ANIMATION 2. Changing Text</h2>
+        <br>
+        <div class="Text-ani">
+            <p>START</p>
+            <div class="text-1"><span>CODING</span> 
+                <div class="text-2"><span>LEARNING</span> </div>
+                <div class="text-3"><span>TEACHING</span> </div>
+            </div>  
+            <p>TODAY</>
+        </div>
+    </div>
+    
+</body>
+</html>

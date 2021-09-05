@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    letter-spacing: 2.5;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: chocolate;
+}
+
+a:hover {
+    color:darkcyan;
+}
+
+
+li {
+    list-style-type: none;
+    display: block;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+    background-color: white;
+    /* box-shadow: olive 0 0 4px; */
+}
+
+.head-bar ul {
+    background-color: gray;
+    color: white;
+    border:0.5px solid grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    box-shadow: rgb(233, 180, 102) 0 2px 3px 0px;
+}
+
+.navi-bar ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    background-color: olive;
+    color:white;
+    box-shadow: rgb(238, 235, 81) 0px 0px 3px 1px; 
+}
+
+.INTRO {
+    text-align: center;
+    height:100%;
+    background-color:none;
+    padding:20px 40px;
+    color: coral;
+
+}
+
+.INTRO h1 {
+    color: black;
+    margin-top: 24px;
+    font-size: 40px;
+}
+
+.row-1-3 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom :20px;
+}
+
+/* First Section */
+/* 
+#sec-1 .row-1-3 {
+    transform: translateY(-30px);
+} */
+
+.head-bar ul a, .navi-bar ul a {
+    color: white;
+}
+
+.navi-bar ul a {
+    font-size: 20px;
+}
+
+.left-info, .right-info {
+    width: 20%;
+    text-align: center;
+    border: lightgray 1px solid;
+}
+
+
+.banner, .banner img {
+    max-width: 550px;
+    justify-self: center;
+
+}
+
+h1, h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px;
+}
+
+#sec-1 h2 {
+    margin-bottom: 12px;
+}
+
+.Section {
+    margin-bottom:40px;
+}
+
+h2 {
+    font-size: 20px;
+}
+/* K and S */
+
+.box-title {
+    background-color:olive;
+    color: white;
+    border: white 2px solid;
+    border-top-left-radius: 6px ;
+    border-top-right-radius: 6px;
+    text-align: center;
+}
+
+.box-3 {
+    align-self: start;
+    margin-bottom: 40px;
+}
+
+.icon {
+    border-top: 2px black solid;
+    font-size: 18px;
+}
+
+.description {
+    text-align: center;
+}
+
+/* Here is the PRODUCT List */
+#grid {
+    justify-content: center;
+}
+
+table {
+    align-self: center;
+    justify-self: center;
+    height: 100%;
+    padding: 10px;
+    border-collapse: collapse;
+}
+
+tr, th, td {
+    border:grey solid 1px;
+    border-collapse:collapse;
+    /* width: max-content; */
+    text-align: center;
+    height: 40px;
+    padding: 5px;
+}
+
+
+tr:nth-child(odd) {
+    background-color: lightgray;
+}
+
+
+/* box items */
+
+.box-2 {
+    width: 30%;
+    margin: 10px;
+    box-shadow: 0px 1px 5px 3px rgb(168, 154, 154);
+    border-radius: 6px;
+
+}
+
+.box-3 {
+    text-align: center;
+    width: 45%;
+}
+
+.box-3 table {
+    width: 100%;
+}
+
+/* idols and quote */
+.box-4 {
+    width: 31.2%;
+}
+
+
+.box-4 .img {
+    width: 100%;
+    height: 200px;
+    text-align: center  ;
+}
+
+.box-4 .img img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.quote {
+    background-color: darkslategray;
+    box-shadow: darkslategray 0px 0px 5px 2px;
+    padding:8px;
+}
+
+.quote p{
+    text-align: center;
+    color: white;
+}
+
+.back-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+   
+}
+.back-top a {
+    color: olive;
+}
+
+.footer {
+
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    font-size: medium;
+    font-weight: 600px;
+    padding-top:30px;
+    padding-bottom: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+
+
+/* change style */
+h2 {
+    background-color: olivedrab;
+    color: white;
+}
+
+h3 {
+    background-color: orange;
+    color: black;
+}
+
+/* animation */
+.navi-bar li {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+}
+.head-bar li:hover, .navi-bar li:hover {
+    background-color: gainsboro;
+}
+
+.head-bar li:hover a, .navi-bar li:hover a {
+    color:orangered;
+}
+
+
+/* add back image */
+
+.Back-image{
+    position: relative;
+    color:#fff;
+    z-index:1;
+    height: 400px;
+    overflow: hidden;
+ }
+ .Back-image img{
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
+ }
+
+
+ .Back-image .overlay  {
+    position: absolute;
+    top:0;
+    left:0;
+    bottom:0;
+    right:0;
+    text-align: center;
+ }
+
+ .Back-image .content {
+    position: absolute;
+    top:50%;
+    left:50%;
+    text-align: center;
+ }

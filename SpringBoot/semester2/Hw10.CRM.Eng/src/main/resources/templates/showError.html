@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head th:replace="template.html::header('Register page')">
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf Application - Bootstrap Input Date</title>
+
+    <link th:rel="stylesheet" th:href="@{assets/bootstrap-datepicker/css/bootstrap-datepicker.css}"/>
+    <link th:rel="stylesheet" th:href="@{assets/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css}"/>
+    <link th:rel="stylesheet" th:href="@{webjars/bootstrap/5.0.1/css/bootstrap.min.css} "/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+<block th:replace = "template.html::menu"></block>
+
+<main role="main" class="container">
+    <h1 class="mt-5">Register new person </h1>
+    <p class="lead">Please provide all neccessary information here!</p>
+
+    <form action="#" th:action="@{/addOrUpdate}" method="post" name="person" enctype="multipart/form-data"
+          th:object="${person}">
+        <input type="hidden" placeholder="id" th:field="*{id}"/><br><br>
+        <div class="form-group row mt-3">
+            <label for="name" class="col-sm-2 col-form-label">Name</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="name" autocomplete="off" th:field="*{fullName}"/>
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">Name Error</div>
+        </div>
+
+        <div class="input-group mt-3 row">
+            <label for="inputGroupSelect03" class="col-sm-2 col-form-label" >Job</label>
+            <div class="col-sm-4">
+                <select class="custom-select" id="inputGroupSelect03" th:field="*{job}">
+                    <block th:each="job : ${jobs}">
+                        <option th:value="${job}" th:text="${job}">One</option>
+                    </block>
+                </select>
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('job')}" th:errors="*{job}">Email Error</div>
+        </div>
+
+        <!--            <div class="form-group row mt-3">-->
+        <!--                <div class="col-sm-4">-->
+        <!--                    <input type="text" class="form-control" id="job" autocomplete="off" th:field="*{job}"/>-->
+        <!--                </div>-->
+        <!--                <div class="text-danger" th:if="${#fields.hasErrors('job')}" th:errors="*{job}">Email Error</div>-->
+        <!--            </div>-->
+
+        <div class="form-group row mt-3">
+            <label for="gender" class="col-sm-2 col-form-label">Gender</label>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" id="gender" autocomplete="off" th:field="*{gender}"/>
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('gender')}" th:errors="*{gender}">Gender Error</div>
+        </div>
+
+        <div class="form-group row mt-3">
+            <label for="birthdate" class="col-sm-2 col-form-label">Date of birth</label>
+            <div class="col-sm-4">
+                <input type="date" class="form-control" id="birthdate" autocomplete="off" th:field="*{birthDate}"
+                       name="birthDate"
+                />
+            </div>
+            <div class="text-danger" th:if="${#fields.hasErrors('birthDate')}" th:errors="*{birthDate}">Gender Error</div>
+        </div>
+
+
+        <div class="form-group row mt-3">
+            <label class="col-sm-2 col-form-label">Select a photo</label>
+            <div class="col-sm-4">
+                <input type="file" class="form-control"th:field="*{photo}" />
+            </div>
+            <div class="text-danger"  th:if="${#fields.hasErrors('photo')}" th:errors="*{photo}">Upload Error</div>
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Submit form</button>
+    </form>
+
+</main>
+
+<footer th:replace = "template.html::footer"></footer>
+
+<script>
+        $('.input-group.date').datepicker({
+            autoclose: true,
+            todayHighlight: true
+        });
+    </script>
+</body>
+</html>

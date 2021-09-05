@@ -1,0 +1,83 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:fragment="main-fragment (title, otherStaticResources, header, nav, mainContent, footer)">
+<head>
+    <meta charset="UTF-8"/>
+    <title th:replace="${title}">Page 1 Title</title>
+
+
+    <link rel="stylesheet" type="text/css" th:href="@{/main.css}" href="../../static/main.css"/>
+<!--    Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Other javascript, css source files -->
+    <th:block th:replace="${otherStaticResources} ?: ~{}"></th:block>
+
+</head>
+<body>
+
+<header th:insert="${header} ?: ~{}">
+    <h2>Page 1 of Layout</h2>
+</header>
+
+<section>
+    <nav th:insert="${nav} ?: ~{}">
+        <ul>
+            <li><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+        </ul>
+    </nav>
+
+    <article th:insert="${mainContent} ?: ~{}">
+        <h1>Page 1</h1>
+        <p>Main content of Page 1</p>
+    </article>
+</section>
+
+<footer th:insert="${footer} ?: ~{}">
+    <p>Footer</p>
+</footer>
+
+<script th:fragment="changeColor">
+
+    //object hold all cookies c1 means cookieName1
+    function getCookie(c1, c2, c3) {
+      let myCookies = {}
+      console.log(document.cookie);
+      let keyName1 = c1 + "=";
+      let keyName2 = c2 + "=";
+      let keyName3 = c3 + "=";
+
+      let cookieArray = document.cookie.split(';');
+      for (let i = 0; i < cookieArray.length; i++) {
+        let c = cookieArray[i];
+        //https://www.w3schools.com/jsref/jsref_indexof.asp
+
+        if (c.indexOf(keyName1) != -1) {
+           myCookies.bgColor = c.substring(c.indexOf(keyName1)+keyName1.length, c.length);
+        }
+        if (c.indexOf(keyName2) != -1) {
+           myCookies.fontColor = c.substring(c.indexOf(keyName2)+keyName2.length, c.length);
+        }
+        if (c.indexOf(keyName3) != -1) {
+           myCookies.fontSize = c.substring(c.indexOf(keyName3)+keyName3.length, c.length);
+        }
+      }
+      return myCookies;
+    }
+
+    let myCookies = getCookie("bgColor", "fontColor", "fontSize");
+    console.log(myCookies);
+    if (myCookies.bgColor !== undefined) {
+      document.querySelector("article").style.backgroundColor = myCookies.bgColor;
+    }
+    if (myCookies.fontColor !== undefined) {
+      document.body.style.color = myCookies.fontColor;
+    }
+    if (myCookies.fontSize !== undefined) {
+      //console.log(myCookies.fontSize);
+      document.body.style.fontSize = myCookies.fontSize;
+    }
+</script>
+
+</body>
+</html>

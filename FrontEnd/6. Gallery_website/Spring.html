@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Spring collection</title>
+		<link rel="stylesheet" href="base.css" />
+		<link rel="stylesheet" href="home.css" />
+		<link rel="shortcut icon" href="data:image/png;base64,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" type="image/x-icon">  	
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital@1&family=Noto+Sans+JP:wght@300&family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<!-- <div class="heading-bar"><span>AWESOME GALLERY - FOUR SEASONS</span></div>
+		 -->
+			<!-- <div class="banner">
+				<img src="https://images.unsplash.com/photo-1608734355137-2ebaead2feb6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2124&q=80" alt="" />
+			</div> -->
+
+			<div class="slogan-intro-bar">
+				<h1>Natural Inspriration</h1>
+				<span>Cảm hứng từ thiên nhiên</span>
+			</div>
+
+			<div class="navi-wrap">
+				<ul class="navi-bar">
+					<li>
+						<a href="./Home.html"><span >Home</span></a>
+					</li>
+					<li>
+						<a href="./Spring.html"><span style="font-family:'Fraunces', serif; color: white; text-decoration: underline;">Spring</span></a>
+					</li>
+					<li>
+						<a href="./Summer.html"><span>Summer</span></a>
+					</li>
+					<li>
+						<a href="./Autumn.html"><span>Autumn</span></a>
+					</li>
+					<li>
+						<a href="./Winter.html"><span>Winter</span></a>
+					</li>
+				</ul>
+			</div>
+
+			<div class="max-size">
+				<div class="row">
+					<div class="left-col">
+
+						<h2>Other collection</h2>
+						<div class="reference">
+							<div class="ref-1">
+								<a href="./Spring.html"><h3>Spring collection</h3></a>
+								<div class="img">
+									<img src="https://images.unsplash.com/photo-1549483930-e852340a08af?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwxNzcyMTcwfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1520799163662-189c0284137b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHwxNzcyMTcwfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1478827536114-da961b7f86d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw1NDUzNDl8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1466496224275-4cbf790b285b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTB8NTQ1MzQ5fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1467733037332-340204cb229b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTN8NTQ1MzQ5fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1490129879107-e19a68d5a5f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NzY3ODh8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+								
+								</div>
+							</div>
+
+							<div class="ref-1">
+								<a href="./Summer.html"><h3>Summer collection</h3></a>
+								<div class="img">
+									<img src="https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80" alt="">
+									<img src="https://images.unsplash.com/photo-1476689381644-d8595d7cb8e1?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1505554898845-050c97a90ad6?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1504548840739-580b10ae7715?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1487252015168-776961549aca?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="">
+									
+								</div>
+							</div>
+
+							<div class="ref-1">
+								<a href="./Autumn.html"><h3>Autumn collection</h3></a>
+								<div class="img">
+									<img src="https://images.unsplash.com/photo-1475092432448-fe76c45a8d6d?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MnwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1516181676778-ff27bcaf5fe6?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8M3wxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1501973801540-537f08ccae7b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1486604028229-1b239b521631?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NHwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1507100403890-47482dcd79e0?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NnwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1450566841345-741bf07d3278?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1477862096227-3a1bb3b08330?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OXwxMDQ5MTcxN3x8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1508891120639-a9e5ffa63079?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTN8MTA0OTE3MTd8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+									<img src="https://images.unsplash.com/photo-1515863149848-223cbed59017?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTV8MTA0OTE3MTd8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+								
+								</div>
+							</div>
+
+							<div class="ref-1">
+								<h3>Winter collection</h3>
+								<div class="img">
+									<img src="https://images.unsplash.com/photo-1504829857797-ddff29c27927?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDF8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1494564605686-2e931f77a8e2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDJ8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1500043357865-c6b8827edf10?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDN8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1540678552870-f933d0329bd5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDd8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1548625149-720134d51a3a?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDh8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+									<img src="https://images.unsplash.com/photo-1493246507139-91e8fad9978e?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDEwfHx8ZW58MHx8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+									</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="right-col">
+							<div class="img-holder">
+							
+								<img src="https://images.unsplash.com/photo-1549483930-e852340a08af?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8NXwxNzcyMTcwfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+								<img src="https://images.unsplash.com/photo-1520799163662-189c0284137b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8OHwxNzcyMTcwfHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="" />
+								<img src="https://images.unsplash.com/photo-1478827536114-da961b7f86d2?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8Mnw1NDUzNDl8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+								<img src="https://images.unsplash.com/photo-1467733037332-340204cb229b?ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MTN8NTQ1MzQ5fHxlbnwwfHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="">
+								<img src="https://images.unsplash.com/photo-1490129879107-e19a68d5a5f9?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxjb2xsZWN0aW9uLXBhZ2V8MXw3NzY3ODh8fGVufDB8fHw%3D&auto=format&fit=crop&w=500&q=60" alt="">
+								<img src="https://i.pinimg.com/originals/fe/86/f0/fe86f02b71f874250766bab7286e3567.jpg" alt="">
+								<img src="https://wdh01.azureedge.net/-/media/hidden-hearing/uk/shared/images/blog/xsounds-of-spring-banner.jpg,qrev=37A8,ala=en-GB.pagespeed.ic.mC7e7D9h5P.jpg" alt="">
+								<img src="https://images.immediate.co.uk/production/volatile/sites/24/2020/05/lamb_625-ed51c88.jpg?quality=90&resize=525%2C350" alt="">
+								<img src="https://media.timeout.com/images/105179478/image.jpg" alt="">
+								<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjFD0dDHLfOHcJIDG0JciE1zQTM9maic0CRA&usqp=CAU" alt="">
+							</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="max-size">
+					<div class="row">
+						<div class="col_3i  footer__logo">
+							<h2>PHOTO COLLECTION</h2>
+							<p style="font-weight: bold;">Nơi lưu giữ những khoảnh khắc đẹp nhất</p>
+						</div>
+						<div class="col_3i">
+							<h2><a href="index.html">Liên kết nhanh</a></h2>
+							<ul>
+								<li><a href="#">Về chúng tôi</a></li>
+								<li><a href="#">Sản phẩm</a></li>
+								<li><a href="#">Tin tức</a></li>
+								<li><a href="#">Liên hệ</a></li>
+								<li><a href="#">Trang chủ</a></li>
+							</ul>
+						</div>
+						<div class="col_3i">
+							<h2><a href="index.html">Địa chỉ cửa hàng</a></h2>
+							<ul>
+								<li><a href="#">Địa chỉ: số 48, Tố Hữu, Lê Văn Lương kéo dài, Hà Nội</a></li>
+								<li><a href="#">Điện thoại: 0123456789</a></li>
+								<li><a href="#">Email: email@gmail.com</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</div>
+	</body>
+</html>
