@@ -153,3 +153,18 @@ button:hover{
     padding: 0px
 }
 
+@media only screen and (max-width: 800px) {
+    .container{
+        width:100%;
+        padding:5px;
+    }
+
+    .input{
+        width: 100%;
+    }
+
+    #input_text {
+        width: 100%;
+    }
+}
+
