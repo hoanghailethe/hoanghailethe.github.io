@@ -1,5 +1,11 @@
-# hoanghailethe.github.io
-helloo. This repository is the learning content, projects and exercises I have done in course "Java fullstack developer" at Techmaster from 31.12.2020 - 15.8.2021 (expectedly)
+# hoanghailethe.github.io 
+## Hi there! Welcome to my place 👋
+### I am Hoang Hai
+- 🌱 I’m currently learning Java SpringBoot / Reacts/ Computer Science 
+- 👯 I’m looking to collaborate on Web/apps project (building or maintainance phrase)
+- 📫 How to reach me: email: lethehoanghai@gmail.com Or phone: +84 868 890 658 
+
+This repository is the learning content, projects and exercises I have done in course "Java fullstack developer" at Techmaster from 31.12.2020 - 15.8.2021 (expectedly)
 
 # Main content I will learn on this course:
 1. HTML CSS 
