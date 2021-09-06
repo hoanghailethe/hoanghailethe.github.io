@@ -472,19 +472,21 @@
                     <div class="text">Message me</div>
                     <form class="contact-form" action="https://formsubmit.co/fdf413556456ee5e9f077b61e0ff1e51" method="POST">
                         <input type="hidden" name="_next" value="https://hoanghailethe.github.io/pages/thankYou.html">
+                        <!-- <input type="email" name="email" class="email-input" placeholder="Email" required> -->
+                        <!-- <input class="message" name="message" cols="30" rows="10" placeholder="Message.." required></input> -->
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" class="fullname" placeholder="Name">
                             </div>
                             <div class="field email">
-                                <input type="text" class="email-input" placeholder="Email" required>
+                                <input type="email" name="email" class="email-input" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="field">
-                            <input type="text" class="subject" placeholder="Subject">
+                            <input type="text" name="subject" class="subject" placeholder="Subject">
                         </div>
                         <div class="field textarea">
-                            <textarea class="message" cols="30" rows="10" placeholder="Message.." required></textarea>
+                            <input class="message" name="message" cols="30" rows="10" placeholder="Message.." required></input>
                         </div>
                         <div class="button-area">
                             <button class="send-msg" type="submit" name="send">Send message</button>
