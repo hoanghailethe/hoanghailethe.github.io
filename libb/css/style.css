@@ -220,6 +220,7 @@ section .title::after{
 .home .max-width .row{
   margin-right: 0;
 }
+
 .home .home-content .text-1{
     font-size: 27px;
     
@@ -256,11 +257,15 @@ section .title::after{
     background: none;
 }
 
+.home .home-content {
+    z-index: 2;
+    position: absolute;
+    top:23%;
+    left:10%;
+}
+
 /* home flying element banner */
 .box-area {
-	position: absolute;
-	top: 0;
-	left: 0;
 	width: 100%;
 	height: 100%;
 	overflow: hidden;
