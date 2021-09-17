@@ -227,4 +227,4 @@ public class PersonRepoTest {
 
 **2. Chạy JUnit Test kết quả như sau:**
 
-![](junit.jpg)
+![](Junit.jpg)
