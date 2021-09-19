@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Create New Product</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+
+    <div class="container">
+        <!-- Content here -->
+        <h1>Create New Product</h1>
+        <br/>
+        <form action="#" th:action="@{/save}" th:object="${product}"
+              method="post">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Product Name</label>
+                <input type="text" th:field="*{name}" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Product name">
+                <small id="emailHelp" class="form-text text-muted">Add a beautiful name for your new product!</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Brand</label>
+                <input type="text" th:field="*{brand}" class="form-control" id="exampleInputPassword1" placeholder="Brand">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Made in </label>
+                <input type="text" th:field="*{madein}" class="form-control" id="exampleInputPassword2" placeholder="Made in">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Price </label>
+                <input type="text" th:field="*{price}" class="form-control" id="exampleInputPassword3" placeholder="Price">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+    </div>
+
+</div>
+</body>
+</html>

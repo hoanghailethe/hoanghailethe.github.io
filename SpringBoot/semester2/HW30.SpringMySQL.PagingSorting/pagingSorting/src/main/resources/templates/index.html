@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"/>
+    <title>Product Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body>
+<div align="center">
+
+    <div class="container">
+        <!-- Content here -->
+        <div class="jumbotron">
+            <h1>Product Manager</h1>
+            <a href="/new">Create New Product</a>
+            <br/><br/>
+        </div>
+
+        <div>
+            <table class="table">
+                <thead class="thead-dark">
+                <tr>
+                    <th scope="col">
+                        <a th:href="@{'/page/' + ${currentPage} +  '?sortField=id&sortDir=' + ${reverseSortDir}}">Product ID</a>
+                    </th>
+                    <th scope="col">
+                        <a th:href="@{'/page/' + ${currentPage} +  '?sortField=name&sortDir=' + ${reverseSortDir}}">
+                            Name
+                        </a>
+                    </th>
+                    <th scope="col">Brand</th>
+                    <th scope="col">Made In</th>
+                    <th scope="col">
+                        <a th:href="@{'/page/' + ${currentPage} +  '?sortField=price&sortDir=' + ${reverseSortDir}}">
+                            Price
+                        </a>
+                    </th>
+                    <th scope="col">Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr th:each="product : ${listProducts}">
+                    <th th:text="${product.id}" scope="row">Product ID</th>
+                    <td th:text="${product.name}">Name</td>
+                    <td th:text="${product.brand}">Brand</td>
+                    <td th:text="${product.madein}">Made in</td>
+                    <td th:text="${product.price}">Price</td>
+                    <td>
+
+                        <a th:href="@{'/edit/' + ${product.id}}">Edit</a>
+                        &nbsp;&nbsp;&nbsp;
+                        <a th:href="@{'/delete/' + ${product.id}}">Delete</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            Total Items: <span th:text="${totalItems}"></span> - Page
+            <span th:text="${currentPage}"></span>  of <span th:text="${totalPages}"></span>
+            &nbsp; - &nbsp;
+            <a th:if="${currentPage>1}" th:href="@{'/page/1' + '?sortField='+ ${sortField} + '&sortDir=' + ${sortDir}}">First</a>
+            <span th:unless="${currentPage>1}">First</span>
+
+            <a  th:if="${currentPage > 1}" th:href="@{'/page/' + ${currentPage - 1} + '?sortField='+ ${sortField} + '&sortDir=' + ${sortDir}}">Previous</a>
+            <span  th:unless="${currentPage > 1}"></span>
+            <span th:each="i:${#numbers.sequence(1,totalPages)}">
+            <a th:if="${i != currentPage}" th:text="${i}" th:href="@{'/page/' + ${i} + '?sortField='+ ${sortField} + '&sortDir=' + ${sortDir}}"></a>
+            <span th:unless="${i != currentPage}" th:text="${i}"></span>
+            &nbsp;&nbsp;
+        </span>
+
+            <a  th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${currentPage + 1} + '?sortField='+ ${sortField} + '&sortDir=' + ${sortDir}}">Next</a>
+            <span  th:unless="${currentPage < totalPages}"></span>
+            <a th:if="${currentPage < totalPages}" th:href="@{'/page/' + ${totalPages} + '?sortField='+ ${sortField} + '&sortDir=' + ${sortDir}}">Last</a>
+            <span th:unless="${currentPage < totalPages}">Last</span>
+
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
