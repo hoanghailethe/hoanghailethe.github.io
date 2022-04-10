@@ -1,7 +1,6 @@
 import java.util.Arrays;
 
 public class _703_lagestElementInStream {
-
     int largestKThNum;
     int[] nums;
 
@@ -12,14 +11,13 @@ public class _703_lagestElementInStream {
     }
     
     public int add(int val) {
-        if(val >= this.largestKThNum) {
+        if(val > this.largestKThNum) {
 
             // binasearch the position to insert = > copy values to new array 
-            
-            int begin = 0;
+            // int begin = 0;
             int end = nums.length-1;
             // int mid = (int) (begin+end)/2;
-            int idxInsert = end;
+            int idxInsert = 0;
 
             // while(begin < end) {
 
@@ -48,7 +46,6 @@ public class _703_lagestElementInStream {
             //insert to nums
             int[] newNums = new int[nums.length-idxInsert ];
             newNums[0] = val;
-            
             for(int i = 1; i < newNums.length ; i++) {
                 newNums[i] = nums[idxInsert+i];
             }
@@ -60,5 +57,27 @@ public class _703_lagestElementInStream {
         System.out.println(Arrays.toString(nums));
         return this.largestKThNum;
 
+    }
+
+
+    class KthLargest {
+        private PriorityQueue<Integer> pq;
+        private int k;
+        public KthLargest(int k, int[] nums) {
+            List<Integer> list= new ArrayList<Integer>();  
+            for(int i = 0; i < Math.min(k, nums.length); ++i) list.add(nums[i]);
+            pq = new PriorityQueue<>(); pq.addAll(list);
+            this.k = k;
+            for(int i = k; i < nums.length; ++i) {
+                pq.add(nums[i]);
+                pq.poll();
+            }
+        }
+        
+        public int add(int val) {
+            pq.add(val);
+            if(pq.size() > k) pq.poll();
+            return pq.peek();
+        }
     }
 }
