@@ -22,21 +22,15 @@ public class _897_increasingOrderSerachTree {
 
     //i think this case using Stack is the best choice
     Stack<TreeNode> stack = new Stack() ;
-    
+//     Runtime: 0 ms, faster than 100.00% of Java online submissions for Increasing Order Search Tree.
+// Memory Usage: 39.8 MB, less than 92.52% of Java online submissions for Increasing Order Search Tree.
     public TreeNode increasingBST(TreeNode root) {
 
         TreeNode res = new TreeNode();
-        TreeNode right = new TreeNode();
-        res.right = right;
-        
-        loadToStack(root);
-         // System.out.println(stack.isEmpty());
 
-        while(stack.isEmpty() == false) {
-            System.out.println(stack.isEmpty());
-            right = unloadFromStack();
-            right =right.right;
-        }
+        loadToStack(root);
+
+        unloadFromStack(res);     
         
 
         return res.right;
@@ -44,16 +38,45 @@ public class _897_increasingOrderSerachTree {
     }
 
     private void loadToStack(TreeNode root) {
-                System.out.println("adding");
+        System.out.println("adding");
         if(root ==null) return;
         if(root.right != null) loadToStack(root.right);
          stack.push(root);
         if(root.left!=null) loadToStack(root.left);
     }
 
-    private TreeNode unloadFromStack() {
+    private void unloadFromStack(TreeNode root) {
+        if(stack.isEmpty()) return;
         TreeNode node = stack.pop();
         node.left = null;
-        return node;
+        if(node!=null) {
+            root.right = node;
+            unloadFromStack(root.right);
+        }
     }
 }
+
+
+class Solution {
+    public TreeNode increasingBST(TreeNode root) {
+        ArrayList<Integer> al = new ArrayList<>();
+        inorder(root, al);
+        return buildTree(al);
+    }
+    
+    private TreeNode buildTree(ArrayList<Integer> al){
+        if(al.size() == 0) return null;
+        TreeNode root = new TreeNode(al.remove(0));
+        root.right = buildTree(al);
+        return root;
+    }
+    
+    private void inorder(TreeNode root, ArrayList<Integer> al){
+        if(root == null) return;
+        inorder(root.left, al);
+        al.add(root.val);
+        inorder(root.right, al);
+    }
+}
+
+// https://leetcode.com/problems/increasing-order-search-tree/discuss/1956051/JAVA-or-0MS-or-NAIVE-and-OPTIMIZED-or-SIMPLE-INORDER-TRAVERSAL-or
