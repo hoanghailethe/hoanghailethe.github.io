@@ -23,7 +23,6 @@ ABOUT my FOLDING CARD GAME!
 there will be a board at the Screenpage ceter alligned.
 size board: 4x4 CARDs
  
-Ok this will use Grid. it better for row, line, and collumn to be responsive
 --UI -- UX--
 Basic funtions of the apps:
 User interaction:
