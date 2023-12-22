@@ -1,7 +1,7 @@
 # hoanghailethe.github.io 
 ## Hi there! Welcome to my place 👋
-### I am Hoang Hai
-- Experienced backend developer for banking system.
+### I am Hoang Hai ⚡
+- :octocat:  Experienced backend developer for banking system.
 - 🌱 I’m currently improve and working on AWS Cloud projects
 - 👯 I’m looking to collaborate on Web/apps project (production) for start up company
 - 📫 How to reach me: email: lethehoanghai@gmail.com Or phone: +84 868 890 658 
@@ -21,3 +21,5 @@
 - AI
 - Cloud Architecture
 - System design
+
+😸 lets have cups of coffee in a saturday noon 
