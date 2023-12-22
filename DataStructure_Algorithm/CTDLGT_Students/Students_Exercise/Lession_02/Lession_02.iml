@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/01_NguyenVanSon" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/02_PhamNgocDo" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/03_NguyenHungDuc" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/04_TruongBaThuong" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/05_DoVietAnh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/07_LaiThiThanhTrang" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/08_DangDucManh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/09_NguyenTrungHieu" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/10_NguyenHoan" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/11_LeTheHoangHai" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/12_LuuDangPho" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/13_BuiDucDuong" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/14_PhamDucSang" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/_06.TranDucHanh" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>
